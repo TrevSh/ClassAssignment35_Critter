@@ -28,7 +28,7 @@ int Critter::GetHunger() const {
 //Used to modify a private variable.
 void Critter::SetHunger(int hunger) {
     if (hunger < 0) {
-        std::cout << "Illegal. Cannot be lower than 0. Im calling the cops.";
+        std::cout << "Illegal. Cannot be lower than 0. Im calling the cops.\n\n";
     }
     else {
         m_Hunger = hunger;
