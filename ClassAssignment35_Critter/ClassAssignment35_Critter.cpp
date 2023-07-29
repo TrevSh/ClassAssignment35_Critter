@@ -7,7 +7,14 @@ class Critter {         //class definition -- defines a new type, Critter.
 public:
     int m_Hunger;       //data member
     void Greet();       //member function
+    Critter(int hunger);//Constructor prototype
 };
+
+//Constructor for Critter. Is called each time a Critter item is instantiated.
+Critter::Critter(int hunger) {      
+    std::cout << "A critter! A critter has been born!" << "\n";
+    m_Hunger = hunger;
+}
 
 void Critter::Greet() {     //Member function definition
     std::cout << "Hello! I am a wee little critter. My hunger level is " << m_Hunger << "!" << "\n";
@@ -15,17 +22,8 @@ void Critter::Greet() {     //Member function definition
 
 int main()
 {
-    Critter c1;
-    Critter c2;
-
-    c1.m_Hunger = 9;
-    std::cout << "Critter 1's hunger level is "<<c1.m_Hunger<<"!\n";
-    
-    c2.m_Hunger = 3;
-    std::cout << "Critter 2's hunger level is "<<c2.m_Hunger<<"!\n";
-
+    Critter c1(4);          //Creating a critter using the constructor. 
     c1.Greet();
-    c2.Greet();
 
     system("pause");
 }
